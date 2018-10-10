@@ -23,7 +23,11 @@ You are going to create a 'TO DO' application. This type of application is very 
 
 ### Styling
 
-Make sure that you also show us your best styling chops. Bootstrap is really helpful! Done be afraid to try and write pure CSS. Make it your own!
+Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
+
+Background color of the page
+font family and size
+text color & or background color of tasks to show whether or not they have been completed
 
 ### Approach
 
@@ -34,6 +38,7 @@ We would recommend you spend some time thinking about how to approach this probl
 Please include a `database.sql` text file in your repo that includes all of your `CREATE TABLE` queries. This is so we can re-create your database while testing your app.
 
 ## Stretch Goals
+Add Bootstrap to the front end and style it up!
 
 In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
 
