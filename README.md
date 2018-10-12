@@ -5,7 +5,7 @@ Hello Primers!
 
 Welcome to your 3rd weekend challenge!
 
-Full stack is pretty awesome, huh? The idea that you are able to spin up a full application architecture in such a short time is pretty incredible. Also worth noting: there are only two weekend challenges left!  This weekend is all about showing us that you have a handle on each of the different parts of the full stack. 
+Full stack is pretty awesome, huh? The idea that you are able to spin up a full application architecture in such a short time is pretty incredible. This weekend is all about showing us that you have a handle on each of the different parts of the full stack. 
 
 ## The To-Do App
 
@@ -23,7 +23,11 @@ You are going to create a 'TO DO' application. This type of application is very 
 
 ### Styling
 
-Make sure that you also show us your best styling chops. We encourage you to try and write pure CSS rather than use Bootstrap.
+Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
+
+Background color of the page
+font family and size
+text color & or background color of tasks to show whether or not they have been completed
 
 ### Approach
 
@@ -33,10 +37,12 @@ We would recommend you spend some time thinking about how to approach this probl
 
 Please include a `database.sql` text file in your repo that includes all of your `CREATE TABLE` queries. This is so we can re-create your database while testing your app.
 
-##HARD MODE
+## Stretch Goals
+Add Bootstrap to the front end and style it up!
+     -  Buttons
+     -  Cards
+     -  Jumbotron
 
-In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task. Once again, you can interrupt this however you would like.
-
-##PRO MODE
+In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
 
 Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
