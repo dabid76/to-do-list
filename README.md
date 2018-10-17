@@ -41,14 +41,17 @@ Please include a `database.sql` text file in your repo that includes all of your
 
 For each of your strech goals, you will be practicing git branching. Please refer to the branching notes for a reminder on commands. Each branch will be merged into master using `--no-ff`. This will allow us to see that you branched your feature when you turn in your code.
 
-- feature-styling-bootstrap
-Add Bootstrap to the front end and style it up!
+- `feature-styling-bootstrap` 
+
+    - [ ]  Add Bootstrap to the front end and style it up!
      -  Buttons
      -  Cards
      -  Jumbotron
 
-- feature-confirm-delete
-In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
+- `feature-confirm-delete`
 
-- feature-completed-task-ordering
-Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
+    - [ ]  In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
+
+- `feature-completed-task-ordering` 
+
+    - [ ]  Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
