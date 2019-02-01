@@ -1,9 +1,9 @@
 
-## Weekend Challenge #3
+## Weekend Challenge: SQL To-Do List
 
 Hello Primers! 
 
-Welcome to your 3rd weekend challenge!
+Welcome to your weekend challenge!
 
 Full stack is pretty awesome, huh? The idea that you are able to spin up a full application architecture in such a short time is pretty incredible. This weekend is all about showing us that you have a handle on each of the different parts of the full stack. 
 
