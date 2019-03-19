@@ -24,10 +24,9 @@ You are going to create a 'TO DO' application. This type of application is very 
 ### Styling
 
 Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
-
-Background color of the page
-font family and size
-text color & or background color of tasks to show whether or not they have been completed
+  - background color of the page
+  - font family and size
+  - text color & or background color of tasks *to show whether or not they have been completed*
 
 ### Approach
 
@@ -48,14 +47,15 @@ For each of your strech goals, you will be practicing git branching. Please refe
 - `feature-styling-bootstrap` 
 
     - [ ]  Add Bootstrap to the front end and style it up!
-     -  Buttons
-     -  Cards
-     -  Jumbotron
+      -  Buttons -- make the creation buttons and completion buttons green and the delete red.
+      -  Inputs -- make your text inputs styled in the bootstrap way
+      -  Responsive -- make your app responsive to different screen sizes -- check out the [Layout](https://getbootstrap.com/docs/4.1/layout/overview/) section
 
 - `feature-confirm-delete`
 
     - [ ]  In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
+        - Some styled options are [Bootstrap Modal](https://getbootstrap.com/docs/4.0/components/modal/) or [Sweet Alerts](https://sweetalert.js.org/guides/).
 
-- `feature-completed-task-ordering` 
+- `feature-ordering-task-query` 
 
-    - [ ]  Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
+    - [ ]  Research [Query Params](https://expressjs.com/en/api.html#req.query) to have the request reverse the order of the returned todos. 
