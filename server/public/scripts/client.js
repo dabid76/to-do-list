@@ -92,6 +92,7 @@ function deleteComplete(){
 } // end deleteComplete
 
 function deleteTask(){
+    console.log('delete btn clicked');
     if (confirm('You sure you want to delete task?')) {
         let id = $(this).closest('tr').data('id');
         $.ajax({
