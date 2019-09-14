@@ -4,7 +4,7 @@ const pool = require('../modules/pool');
 
 // GET
 router.get('/', (req, res) => {
-    let queryText = `SELECT * FROM "to-do-list";`;
+    let queryText = `SELECT * FROM "to-do-list" ORDER BY "id";`;
   console.log('in /toDoTask GET');
   pool.query(queryText).then(result =>{
     res.send(result.rows);
@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
     res.sendStatus(500);
   })
 }) // end GET
+
 // POST
 router.post('/', (req, res) => {
     console.log(req.body);
@@ -33,6 +34,7 @@ router.post('/', (req, res) => {
         });
 
 }); // end POST
+
 // PUT
 router.put('/complete/:id', ( req, res) => {
     let task = req.body;
@@ -50,6 +52,19 @@ router.put('/complete/:id', ( req, res) => {
         res.sendStatus(500)
     })
 }) // end PUT
-// DELTE
 
+// DELTE
+router.delete( '/delete/:id', (req, res) => {
+    let id = req.params.id;
+    console.log('Delete route', id);
+    let queryText = `DELETE FROM "to-do-list" WHERE "id" = $1;` ;
+    pool.query(queryText, [id]).then((result) => {
+        console.log(result)
+        res.sendStatus(200)
+    })
+    .catch((error) => {
+        console.log("error on router.delete", error)
+        res.sendStatus(500);
+    })
+}) // end DELETE
 module.exports = router

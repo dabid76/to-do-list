@@ -7,7 +7,8 @@ function setUp() {
     getTask()
     $( '#addTask' ).on( 'click', addTask)
     $( '#viewTask' ).on( 'click', '.completedBtn', taskComplete)
-}
+    deleteComplete();
+} // end setUp
 
 function getTask(){
     console.log( 'getting task' );
@@ -39,7 +40,7 @@ function addTask(){
     }).catch(function (error) {
         console.log('Error in POST:', error)
     });
-    
+
     $( '#taskInput' ).val('');
 } // end addTask POST
 
@@ -85,3 +86,22 @@ function taskComplete(){
         console.log(err);
     })
 } // end taskComplete PUT
+
+function deleteComplete(){
+    $('#viewTask').on('click', '.deleteBtn', deleteTask)
+} // end deleteComplete
+
+function deleteTask(){
+    if (confirm('You sure you want to delete task?')) {
+        let id = $(this).closest('tr').data('id');
+        $.ajax({
+          type: 'DELETE',
+          url: `/toDoTask/delete/${id}`
+        }).then(function (response) {
+          console.log('delete', response);
+          getTask();
+        }).catch(function (error) {
+          alert('error on delete', error)
+        })
+      }
+} // end deleteTask DELETE
