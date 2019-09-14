@@ -48,7 +48,7 @@ function appendTask(toDoAppend) {
         if(list.complete == 'complete'){
             let row = $(`<tr>
                 <td style="color:springgreen;">${list.task}</td>
-                <td style="color:springgreen;">${list.completed}</td>
+                <td style="color:springgreen;">${list.complete}</td>
                 <td></td>
                 <td><button class="deleteBtn">Delete</button><td>
             </tr>`
@@ -58,7 +58,7 @@ function appendTask(toDoAppend) {
         } else {
             let row = $(`<tr>
                 <td style="color:white;">${list.task}</td>
-                <td style="color:white;">${list.completed}</td>
+                <td style="color:white;">${list.complete}</td>
                 <td><button class= "completedBtn">Completed</button></td>
                 <td><button class="deleteBtn">Delete</button></td>
             </tr>`

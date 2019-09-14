@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
     INSERT INTO "to-do-list" ("task", "complete")
     VALUES ($1, $2);
     `;
-    pool.query(queryText, [toAdd.task, toAdd.completed])
+    pool.query(queryText, [toAdd.task, toAdd.complete])
         .then((result) => {
             console.log(result)
             res.sendStatus(201);
