@@ -7,7 +7,7 @@ const toDoRouter = require('./routes/to-do.router')
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('server/public'));
 
-// app.use('/toDo', toDoRouter)
+app.use('/toDoTask', toDoRouter)
 
 app.listen(PORT, () => {
   console.log('listening on port', PORT);

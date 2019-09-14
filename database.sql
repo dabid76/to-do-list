@@ -1,7 +1,7 @@
 CREATE TABLE "to-do-list" (
 "id" serial primary key,
 "task" varchar (250) not null,
-"complete" boolean DEFAULT false
+"complete" varchar(20)
 );
 
 INSERT INTO "to-do-list" ("task")
