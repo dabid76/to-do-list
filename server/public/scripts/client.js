@@ -6,6 +6,7 @@ $( document ).ready( setUp)
 function setUp() {
     getTask()
     $( '#addTask' ).on( 'click', addTask)
+    $( '#viewTask' ).on( 'click', '.completedBtn', taskComplete)
 }
 
 function getTask(){
@@ -20,7 +21,7 @@ function getTask(){
     }).catch(function(error){
         console.log('errrrrrrrrrrorrrrrrrrrrr', error)
     })
-} // end getTask
+} // end GET getTask
 
 function addTask(){
     console.log( 'adding task' );
@@ -38,7 +39,9 @@ function addTask(){
     }).catch(function (error) {
         console.log('Error in POST:', error)
     });
-} // end addTask
+    
+    $( '#taskInput' ).val('');
+} // end addTask POST
 
 function appendTask(toDoAppend) {
     $( '#viewTask' ).empty();
@@ -68,3 +71,17 @@ function appendTask(toDoAppend) {
         }
     }
 } // end appendTask
+
+function taskComplete(){
+    console.log("completeBtn clicked")
+    let id = $(this).closest('tr').data('id');
+    $.ajax({
+        url: `/toDoTask/complete/${id}`,
+        method: 'PUT'
+    }).then(function (response) {
+        console.log(response);
+        getTask();
+    }).catch(function (err) {
+        console.log(err);
+    })
+} // end taskComplete PUT

@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     console.log('there was an error getting to do list', error);
     res.sendStatus(500);
   })
-})
+}) // end GET
 // POST
 router.post('/', (req, res) => {
     console.log(req.body);
@@ -32,9 +32,24 @@ router.post('/', (req, res) => {
             res.sendStatus(500);
         });
 
-});
+}); // end POST
 // PUT
+router.put('/complete/:id', ( req, res) => {
+    let task = req.body;
+    let id = req.params.id;
 
+    console.log(`updating koala with ${id}`, task);
+    let queryText = `UPDATE "to-do-list" SET "complete" = 'complete' WHERE "id" = $1;` ;
+    pool.query(queryText, [id])
+    .then(result => {
+        console.log(result)
+        res.sendStatus(200)
+    })
+    .catch(err => {
+        console.log("error on put", err)
+        res.sendStatus(500)
+    })
+}) // end PUT
 // DELTE
 
 module.exports = router
