@@ -40,7 +40,7 @@ router.put('/complete/:id', ( req, res) => {
     let task = req.body;
     let id = req.params.id;
 
-    console.log(`updating koala with ${id}`, task);
+    console.log(`updating with ${id}`, task);
     let queryText = `UPDATE "to-do-list" SET "complete" = 'complete' WHERE "id" = $1;` ;
     pool.query(queryText, [id])
     .then(result => {
